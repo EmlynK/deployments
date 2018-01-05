@@ -243,7 +243,7 @@ def run_composer_install(repo, branch, build, composer_lock):
     if composer_lock == False:
       run ("rm %s/composer.lock" % path)
 
-  run("cd %s && composer install" % (path))
+  run("cd %s && composer install --no-interaction" % (path))
 
 
 # Run a drush status against that build
